@@ -1,0 +1,464 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shorctur icon" type="x-icon" href="Images/shared/iconTopPage.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubisoft | Sito Replica </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> -->
+    <script src="app.js" defer></script> 
+</head>
+<body>
+    <header>
+        <div class="modal__giochi" id="modalGiochi" status="none">
+            <div class="modal__ricerca">
+                <div class="ricerca-categoria">
+                    <h3>CERCA PER CATEGORIA</h3>
+                    
+                    <a href="">In evidenza</a>
+                    <a href="">Da più recente a più vecchio</a>
+                    <a href="">Giochi Gratuiti</a>
+                </div>
+                <div class="ricerca-piattaforma">
+                    <h3>CERCA PER PIATTAFORMA</h3>
+                    
+                    <a href="">PC</a>
+                    <a href="">Xbox</a>
+                    <a href="">Playstation</a>
+                    <a href="">Nintendo Switch</a>
+                    <a href="">Realtà virtuale</a>
+                    <a href="">Mobile</a>
+                </div>
+                <div class="ricerca-titolo">
+                    <h3>CERCA PER TITOLO</h3>
+                  
+                    <a href="">Stars Wars Outlaws</a>
+                    <a href="">Assassin's Creed Shadows</a>
+                    <a href="">XDEFIANT</a>
+                    <a href="">Anno 117: Pax Romana</a>
+                    <a href="">Avatar: Frontiers of Pandora</a>
+                    <a href="">Skull and Bones</a>
+                    <a href="">Prince of Persia: The lost Crown</a>
+                    <a href="">The Crew Motorfest</a>
+                    <a href="">Assassin's Creed Mirage</a>
+                    <a href="">Just Dance 2024 Edition</a>
+                </div>
+
+                <button class="ricerca-button">
+                    VISUALIZZA TUTTI I GIOCHI
+                </button>
+            </div>
+            
+            <div class="modal__ubisoft-plus">
+                <h3>SCOPRI UBISOFT+</h3>
+                <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4tBpf5HvSRBpQS7geVtpOm/3abdd4ccf50332d5daf6bd870a8ad36d/ubi-global_nav-discover_ubiplus-play-image.jpg" alt="">
+                <button class="ubisoft-plus__button">
+                    VISUALIZZA PIANI
+                </button>
+            </div>
+        </div>
+
+        <div class="modal__negozio" id="modalNegozio" status="none">
+            <div class="modal__ricerca">
+                <div class="ricerca-categoria">
+                    <h3>CERCA PER CATEGORIA</h3>
+                    
+                    <a href="">Videogiochi</a>
+                    <a href="">Contenuti scaricabili</a>
+                    <a href="">Più venduti</a>
+                    <a href="">Nuove uscite</a>
+                    <a href="">Prenota</a>
+                    <a href="">Offerta</a>
+                </div>
+    
+                <div class="ricerca-titolo">
+                    <h3>CERCA PER TITOLO</h3>
+                    <a href="">Rainbow Six Siege</a>
+                    <a href="">Assassin's Creed Mirage</a>
+                    <a href="">Assassin's Creed II</a>
+                    <a href="">Assassin's Creed</a>
+                    <a href="">Skull and Bones</a>
+                    <a href="">Rocksmith+</a>
+                    <a href="">Assassin's Creed Unity</a>
+                    <a href="">Assassin's Creed Valhalla</a>
+                    <a href="">For Honor</a>
+                    <a href="">Rayman</a>
+                </div>
+
+                <button class="ricerca-button">
+                    UBISOFT STORE
+                </button>
+            </div>
+            
+            <div class="modal__popolari">
+                <h3>PIU' POPOLARI</h3>
+                <div class="popolari-item"> 
+                    <div class="popolari-item__card">
+                        <img src="https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dweb2b3558/images/large/5e15a2665cdf9a1ec45ad82b.jpg?sw=300&sh=395&sm=fit" alt="">
+                        <h2>Tom Clancy's Rainbow Six Siege</h2>
+                        <p>Deluxe Edition</p>
+                        <h4>29,99 €</h4>
+                    </div>
+
+                    <div class="popolari-item__card second">
+                        <img src="https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dwb1a1bd7b/images/large/62ea4f8e09372571f2736a71.jpg?sw=300&sh=395&sm=fit" alt="">
+                        <h2>Assassin's Creed Mirage</h2>
+                        <p>Standard Edition</p>
+                        <h4>49,99 €</h4>
+                    </div>
+
+                    <div class="popolari-item__card">
+                        <img src="https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dw5df235dd/images/large/56c4947f88a7e300458b4690.jpg?sw=300&sh=395&sm=fit" alt="">
+                        <h2>Assassin's Creed II</h2>
+                        <p>Standard Edition</p>
+                        <h4>9,99 €</h4>
+                    </div>
+                </div>
+            
+                <button class="popolari-negozio__button">
+                    VISUALIZZA TUTTO
+                </button>
+            </div>
+        </div>
+
+        <div class="modal__scopri" id="modalScopri" status="none">
+            <div class="modal__notizie">
+                <h3 class="notizie-container-title">ULTIME NOTIZIE</h3>
+
+                <div class="notizie-container">
+                    <div class="notizia-card">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1he43XSEP0EQM5y3WBw8mP/5d6bf2efc55dcbea552e791166faa330/BGER_Screenshots_Store_HD_14.jpg" alt="">
+                        <div class="notizia-description">
+                            <p>20 giugno 2024</p>
+                            <h3>Beyond Good &amp; Evil - 20th Anniversary Edition Launches on June 25</h3>
+                        </div>
+                    </div>
+
+                    <div class="notizia-card">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2w0CkXyO6lzC5yX4REENQI/9bdab3e94aba11149fb6b97f9821e32d/un-jd25-announce-thumbnail.jpg" alt="">
+                        <div class="notizia-description">
+                            <p>18 giugno 2024</p>
+                            <h3>Just Dance 2025 Edition Launches This October</h3>
+                        </div>
+                    </div>
+
+                    <div class="notizia-card">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6EffMWF1oyuBEnnqVcwsMa/ecc475dd9f7ca6ef96e2d8a9d8d730a7/PoPSoT_Trailer_16x9__1_.jpg" alt="">
+                        <div class="notizia-description">
+                            <p>11 giugno 2024</p>
+                            <h3>First Details on the Remake of Prince of Persia: The Sands of Time</h3>
+                        </div>
+                    </div>
+
+                    <div class="notizia-card">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/43e7S3vmfP1vRgrJKibPW3/52f0309b00235f9d55ec881b4d7167eb/un-anno117-paxromana-6-easter-eggs-reveal-trailer-article-thumbnail960x540.jpg" alt="">
+                        <div class="notizia-description">
+                            <p>18 giugno 2024</p>
+                            <h3>Anno 117:Pax Romana - 6 Easter Eggs in the Reveal Trailer</h3>
+                        </div>
+                    </div>
+
+                    <div class="notizia-card">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/79iztfE6xsOJjrGYOhIiMJ/20eccd596d0a00ae2ca6ad8c1578ea9f/UN-POPTLC_BossEX_Erlik.jpg" alt="">
+                        <div class="notizia-description">
+                            <p>13 giugno 2024</p>
+                            <h3>Prince of Persia:The Lost Crown Coming to Steam on August 8</h3>
+                        </div>
+                    </div>
+
+                    <div class="notizia-card">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/quCLJo6RVRn3Pro6zM2vk/e949b42e18960568b024d5151eca7276/Thumbnail.jpg" alt="">
+                        <div class="notizia-description">
+                            <p>10 giugno 2024</p>
+                            <h3>Star Wars Outlaws and Assassin's Creed Shadows Reveal New Gameplay,XDegiant Season 1 Details Announced</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="visualizza-button">
+                    VISUALIZZA TUTTE LE NOTIZIE
+                </button>
+            </div>
+            
+            <div class="modal-scopri__description">
+                <div class="dentro-ubisoft">
+                    <h3>DENTRO UBISOFT</h3>
+                    <a href="">Chi Siamo (EN)</a>
+                    <a href="">Offerte di Lavoro (EN)</a>
+                    <a href="">Come realizzare i giochi (EN)</a>
+                    <a href="">Impatto sociale (EN)</a>
+                </div>
+
+                <div class="non-solo-giochi">
+                    <h3>NON SOLO GIOCHI</h3>
+                    <a href="">Film e Tv (EN)</a>
+                    <a href="">Libri, musica e podcast(EN)</a>
+                    <a href="">Formazione ed eventi(EN)</a>
+                    <a href="">Parchi ed esperienze(EN)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal__aiuto" id="modalAiuto" status="none">
+            <div class="Aiuto">
+                <h3>AIUTO</h3>
+                <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6sVGCjWluydrt5wxCx0j7m/8062386a6e11faeb864efe73f77c903e/ubi-meganav-rabbids-support-540-v2.jpg" alt="">
+                <p>
+                    Ti Serve aiuto? Abbiamo preparato una lista di risposte alle domande 
+                    più frequenti oppure possiamo metterti in contatto con qualcuno dello staff
+                </p>
+
+                <button class="aiuto-button">
+                    AIUTO
+                </button>
+            </div>
+            
+            <div class="Discord">
+                <h3>DISCORD</h3>
+                <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/McHxhuZWhHIpnREIE2BHm/6b4c2aa1caa1d7dfd0ebf8cb37aa114a/ubi-meganav-rabbids-forums-540-v2.jpg" alt="">
+                <p>
+                    Entra nella community per ricevere suggerimenti e trucchi e collegarti
+                    con giocatori di tutto il mondo. 
+                </p>
+
+                <button class="entra-button">
+                    ENTRA IN DISCORD
+                </button>
+            </div>
+
+
+            <div class="ubisoft-connect">
+                <h3>UBISOFT CONNECT</h3>
+                <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/13bPwzrfvjWsPEJtmD0RF9/e2cc54a605c9a80df913ca2ad4ee4104/ubisoft-meganav-ubisoft_connect_pc-promo.jpg" alt="">
+                <p>
+                    Gioca ai toui giochi per PC, ottieni Ricompense speciali e collegati agli amici su piattaforme diverse. 
+                    Prova la nuova Beta di Ubisoft Connect PC: puoi attivarla dalla barra di navigazione dell'app per 
+                    desktop!
+                </p>
+
+                <button class="scarica-button">
+                    SCARICA UBISOFT CONNECT PC
+                </button>
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="#" class="logo-container">
+                    <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32" width="40px" height="40px"><path d="M15.217,3C7.145,3,3.661,10.184,3.661,10.184l1.026,0.734c0,0-1.291,2.454-1.255,5.602C3.432,22.947,8.547,29,16.077,29	c6.841,0,12.492-5.568,12.492-12.464C28.569,7.543,21.595,3,15.217,3L15.217,3z M15.287,5.192c6.306,0,11.2,5.082,11.2,10.99	c0,6.263-4.71,10.618-10.199,10.618c-4.04,0-7.684-3.076-7.684-7.294c0-2.436,1.295-4.134,2.746-5.04l0.212,0.23	c-0.397,0.311-1.529,2.129-1.529,3.917c0,3.318,2.602,5.617,5.881,5.617c4.177,0,6.962-3.562,6.962-7.698	c0-4.812-4.248-8.898-9.36-8.898c-2.827,0-5.227,1.216-6.606,2.289L6.695,9.729C8.499,6.948,11.623,5.192,15.287,5.192z M13.405,9.796c3.262,0,6.447,2.158,7.242,5.221l-0.289,0.11c-1.427-1.885-3.766-3.447-6.528-3.447	c-5.082,0-7.751,4.618-7.359,8.475l-0.299,0.11c0,0-0.561-1.239-0.561-2.707C5.609,13.304,9.102,9.796,13.405,9.796L13.405,9.796z M15.561,15.134c1.544,0,2.78,1.252,2.78,2.738c0,1.23-0.79,1.958-0.79,1.958l0.935,0.654c0,0-0.927,1.456-2.82,1.456	c-1.811,0-3.412-1.461-3.412-3.427C12.254,16.488,13.996,15.134,15.561,15.134L15.561,15.134z"/></svg>
+                    <p class="logo-title">UBISOFT</p>
+                </a>
+            </div>
+            <div class="nav-bar__items">
+                <p id="nav-bar__giochi" modalrefere="modalGiochi">GIOCHI</p>
+                <p id="nav-bar__negozio" modalrefere="modalNegozio">NEGOZIO</p>
+                <p id="nav-bar__scopri" modalrefere="modalScopri">SCOPRI</p>
+                <p id="nav-bar__aiuto" modalrefere="modalAiuto">AIUTO</p>
+            </div>
+            <div class="nav-bar__tools">
+                <button>Scarica Ubisoft Connect</button>
+                <img src="Images/Home/download.png" alt="Scarica">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <header class="main-carousel">
+            <ul class="main-carousel__list-container">       
+                <li class="main-carousel__card-item active" id="card1" idCard="1">
+                    <div class="main-carousel__card-item-backdrop"></div>
+                    <h1>ASSASSIN'S CREED SHADOWS SARÀ DISPONIBILE DAL 15 NOVEMBRE</h1>
+                    <h2>Diventa un leggendario samurai e un'Assassina shinobi nel Giappone feudale. Guarda subito oltre 12 minuti di sequenze di gioco.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>GUARDA IL TRAILER</button>
+                        <button>PRENOTA ORA</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card2" idCard="2">
+                    <h1>STAR WARS OUTLAWS: PREORDINA SUBITO</h1>
+                    <h2>Scopri il primissimo gioco open world di Star Wars™. Disponibile il 30 agosto 2024.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>VISITA IL SITO WEB</button>
+                        <button>PREORDINA SUBITO</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card3" idCard="3">
+                    <h1>XDEFIANT STAGIONE 1: 2 LUGLIO</h1>
+                    <h2>Nuova fazione, mappe, armi, e classificate in arrivo con la Stagione 1.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>GUARDA IL TRAILER</button>
+                        <button>GIOCA GRATIS ORA</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card4" idCard="4">
+                    <h1>BATTLECORE ARENA - GIOCA SUBITO GRATIS!</h1>
+                    <h2>BattleCore Arena è un entusiasmante sparatutto platform, in cui la gestione della gravità è il segreto per vincere.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>GIOCA GRATIS</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card5" idCard="5">
+                    <h1>PROTEGGI PANDORA. DIVENTA NA'VI.</h1>
+                    <h2>Scopri la tua eredità perduta e cosa significa essere na'vi e lotta al fianco degli altri clan per proteggere Pandora.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>GUARDA IL TRAILER</button>
+                        <button>ACQUISTA ORA</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card6" idCard="6">
+                    <h1>INCONTRA LA CHASE SQUAD E PREPARATI PER L'ANNO 2.</h1>
+                    <h2>Nuovo anno, nuova era per The Crew Motorfest. Il nostro più grande aggiornamento è in arrivo a novembre, con una nuova isola gratuita, nuovi veicoli, nuove playlist e molto altro da scoprire!</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>VISITA IL SITO WEB</button>
+                        <button>GUARDA IL TRAILER</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card7" idCard="7">
+                    <h1>STAGIONE ESTIVA ORA DISPONIBILE!</h1>
+                    <h2>Nella Republic è arrivata l'estate! Goditi 13 settimane di avventure soleggiate, puro divertimento e discese impegnative!</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>VISITA IL SITO WEB</button>
+                        <button>COMPARA ORA</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card8" idCard="8">
+                    <h1>SKULL AND BONES - CHORUS OF HAVOC</h1>
+                    <h2>Affronta nuove minacce, dagli eccentrici gemelli Hubac a un colossale megalodonte che infesta i mari.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>VISITA IL SITO WEB</button>
+                        <button>COMPRA ORA</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card9" idCard="9">
+                    <h1>JUST DANCE VR</h1>
+                    <h2>Immergiti in una nuova era di ballo con Just Dance VR! Entra in una nuova dimensione della danza tuffandoti nel mondo immersivo della realtà virtuale.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>VISITA IL SITO WEB</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card10" idCard="10">
+                    <h1>FOR HONOR - THE MURAMASA BLADE</h1>
+                    <h2>Si narra che la Lama Muramasa contenga il potere di un intero esercito. Il suo possessore, il Maestro Katashi, vuole fermare chiunque cerchi di invadere il Myre.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>GUARDA IL TRAILER</button>
+                        <button>VISITA IL SITO</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card11" idCard="11">
+                    <h1>OPERAZIONE NEW BLOOD</h1>
+                    <h2>Con Operazione New Blood, il cambiamento è in arrivo.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>VISITA IL SITO WEB</button>   
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card12" idCard="12">
+                    <h1>OTTIENI UNITS ACQUISTANDO DA UBISOFT STORE</h1>
+                    <h2>Fino al 75% di sconto</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>ACQUISTA ORA</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card13" idCard="13">
+                    <h1>ANNO 117 : PAX ROMANA</h1>
+                    <h2>Nell'ultimo capitolo della pluripremiata serie strategica Anno, il tuo destino è plasmare l'Impero romano nell'anno 117 d.C.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>VISITA IL SITO WEB</button>
+                        <button>AGGIUNGI ALLA LISTA DESIDERI</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card14" idCard="14">
+                    <h1>JUST DANCE 2025 EDITION</h1>
+                    <h2>Raduna amici e familiari per scatenarvi insieme in Just Dance! Vuoi festeggiare, allenarti o creare momenti speciali in famiglia? Con i nuovi 40 celebri brani di Just Dance 2025 Edition potrai fare questo e molto altro.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>VISITA IL SITO WEB</button>
+                        <button>GUARDA IL TRAILER</button>
+                    </div>
+                </li>
+                <li class="main-carousel__card-item" id="card15" idCard="15">
+                    <h1>RISCOPRI UN'AVVENTURA PLURIPREMIATA</h1>
+                    <h2>Affronta questa epica avventura in 4K e a 60 fps, con grafica e audio migliorati, una nuova modalità speedrun, obiettivi aggiornati e un'esclusiva galleria dell'anniversario.</h2>
+                    <div class="main-carousel__card-buttons">
+                        <button>GUARDA IL TRAILER</button>
+                        <button>VISITA IL SITO WEB</button>
+                    </div>
+                </li>
+
+                <div class="list-card-name__container">
+                    <button class="left-btn"><img src="Images/Home/leftarrow.png" alt="" width="40px" height="40px"></button>
+
+                    <div class="containerScroll">
+                        <div class="title-card extremleft" id="14">
+                            <h3>JUSTE DANCE 2025 EDITION</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/71eambPeJNqH4PtK99mqhC/e9141b3da3d2660aaed955055bef8294/just-dance-2025-logo.png" alt="">
+                        </div>
+                        <div class="title-card" id="15">
+                            <h3>BEYOND GOOD AND EVIL 20TH ANNIVERSARY</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/qQWqO3MR7cWgMP5aaa0NB/a90864588ae67dd78ba7fa1aea9504db/BGER_Logo_Gold_Vertical.png" alt="">
+                        </div>
+                        <div class="title-card center"  id="1">
+                            <h3>ASSASSIN'S CREED SHADOWS</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2xdmbbMzG5B5hoUrXdClHg/068c226b2d878fe18eae9194171f00d0/RED_Vertical_AllWhite_NoCrest.png" alt="">
+                        </div>
+                        <div class="title-card"  id="2">
+                            <h3>STAR WARS OUTLAWS</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/KbPxgD99jMnHkNTq6uF22/6a5a5bcc8e40b3d44ac2902530abb2ee/ubi-homescreen-logo-swo.png" alt="">
+                        </div>
+                        <div class="title-card" id="3">
+                            <h3>XDEFIANT</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2DniNLmxW9s5NATEsSG31h/284adc45d80b3357f7d5f1286da2f4d0/UBI_XDEF_white_logo.png" alt="">
+                       </div>
+                        <div class="title-card"  id="4">
+                            <h3>BATTLECORE ARENA</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/phHfEKuyyQbkIb6sjFOuc/e51ed6973a6936bf99e3b7ceeb04307c/ubicom-homescreen-battlecore-logo-color.png" alt="">
+                        </div>
+                        <div class="title-card" id="5">
+                            <h3>AVATARS: FRONTIERS OF PANDORA</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6HJ8139QVJPUFqQBGpTiom/1aac4c968faf8fe6bfbeeb84fbbec608/avtr_fop-homescreen-carousel-logo.png" alt="">
+                        </div>
+                        <div class="title-card" id="6">
+                            <h3>THE CREW MOTORFEST</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/57nkMqYX3qNoYJlB2u7IGO/00e8e633d592aed832abbe9ac85122c1/ubi-homescreen-logo-crew_motorfest.png" alt="">
+                        </div>
+                        <div class="title-card" id="7">
+                            <h3>RIDERS REPUBLIC</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2yLU9oG0G0GQ5exmW83MBi/96e769df3159c93c60644d9313172952/homescreen-hero-riders_republic-logo-color.png" alt="">
+                        </div>
+                        <div class="title-card" id="8">
+                            <h3>SKULL OF BONES</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/69dYrpvDKz2pvtv1V4tFlq/bf7638b80716766bca8976252eb33351/SB-Logo-InLine-tm-UbiOriginal_FINAL_WHITE.png" alt="">
+                        </div>
+                        <div class="title-card"  id="9">
+                            <h3>JUST DANCE VR</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/p5j69HhomMv2GxlbIfahH/0d5c124d33943e2647b8c0aeeb41de2d/JDVR-logo-white.png" alt="">
+                        </div>
+                        <div class="title-card"  id="10">
+                            <h3>FOR HONOR</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/766lZcUbVNYOWbA7T8DPVf/d8f259f120fbf4e21431d8f358ecee72/homescreen_hero-FH_og_logo_300w.png" alt="">
+                        </div>
+                        <div class="title-card" id="11">
+                            <h3>RAINBOW SIX SIEGE</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/53XHaP3QiX6PFa08DEsM36/17115ad721bb937bc76a7fa0737bb647/r6s-y6-logo__1_.png" alt="">
+                        </div>
+                        <div class="title-card" id="12">
+                            <h3>UBISOFT STORE</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/13gv3vxQH7TLYLNDXYBW0b/fd85697ef24007469d0adf409ecb1728/ubi-homescreen-logo-ubisoftstore.png" alt="">
+                        </div>
+                        <div class="title-card" id="13">
+                            <h3>ANNO 117:PAX ROMANA</h3>
+                            <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4W3S6encFkNP3VMLIXFzyT/f09b6a89f12785244c3bd6ea1f3963cf/logo_anno_white.png" alt="">
+                        </div>   
+                        
+                    </div>
+
+                    <button class="right-btn"><img src="Images/Home/rightarrow.png" alt="" width="40px" height="40px"></button>
+                </div>
+            </ul>
+        </header>
+    </main>
+
+    <footer></footer>
+</body>
+</html>
+
+

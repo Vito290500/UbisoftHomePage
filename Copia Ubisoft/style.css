@@ -1,0 +1,732 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+:root {
+    --bg-color: white;
+    --second-bg-color: rgb(222, 230, 234);
+    --second-level-bg-color: rgb(3, 3, 3);
+    --button-first-color: rgb(207, 6, 103);
+    --button-second-color: rgb(16, 102, 251);
+    --text-color: white;
+    --text-second-color: rgb(57, 57, 57);
+}
+
+body::-webkit-scrollbar{
+    width: 0px;
+}
+
+/* Nav Bar Style */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--second-level-bg-color);
+    height: 3.5rem;
+    display: flex;
+    z-index: 100;
+}
+.logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 12%;
+}
+.logo-container {
+    text-decoration: none;
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-title {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+.nav-bar__items {
+    position: relative;
+    width: 46%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.nav-bar__items p {
+    width: 12%;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+.nav-bar__items .hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.nav-bar__tools {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42%;
+}
+.nav-bar__tools button {
+    background-color: var(--second-level-bg-color);
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+.nav-bar__tools img {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* Modal Giochi Nav Bar*/
+.modal__giochi{
+    position: fixed;
+    top: 3.5rem;
+    background-color: var(--bg-color);
+    display: flex;
+    width: 90%;
+    left: 3%;
+    z-index: 100;
+    height: 600px;
+    border-radius: 0px 0px 5px 5px;
+    padding: 25px;
+    display: none;
+
+}
+.modal__ricerca{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30% 40% 30%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.ricerca-categoria,
+.ricerca-piattaforma,
+.ricerca-titolo{
+    display: flex;
+    flex-direction: column;
+}
+.modal__ricerca h3 {
+    font-size: 15px;
+    color: var(--text-second-color);
+    font-weight: bold;
+    padding: 16px 0px;
+    border-bottom: 1px solid rgba(87, 87, 87, 0.5);
+    width: 90%;
+}
+.modal__ricerca a:first-of-type{
+    padding-top: 16px;
+}
+.modal__ricerca a{
+    padding: 8px 0px;
+    text-decoration: none;
+    color: rgb(46, 44, 44);
+    font-size: 17px;
+}
+.modal__ricerca a:hover{
+    color: black;
+    font-weight: bold;
+}
+.ricerca-titolo{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 100%;
+}
+.ricerca-titolo a{
+    padding: 10px 0px;
+}
+.ricerca-button{
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border: none;
+    background-color: var(--button-first-color);
+    color: white;
+    position: relative;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    width: 350px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.ricerca-button:hover{
+    background-color: var(--bg-color);
+    border: 3px solid var(--button-first-color);
+    color: var(--button-first-color);
+}
+.modal__ubisoft-plus img{
+   width: 90%;
+   height: 75%;
+   padding: 0px 20px 20px 0px;
+}
+.modal__ubisoft-plus h3{
+    font-size: 15px;
+    color: var(--text-second-color);
+    font-weight: bold;
+    padding: 16px 0px;
+}
+.ubisoft-plus__button,
+.popolari-negozio__button{
+    border: none;
+    background-color: var(--button-second-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    width: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 30%;
+    margin-top: 20px;
+}
+.ubisoft-plus__button:hover{
+    background-color: var(--bg-color);
+    border: 3px solid var(--button-second-color);
+    color: var(--button-second-color);
+}
+
+
+
+/* Modal Negozio */
+.modal__negozio{
+    position: fixed;
+    top: 3.5rem;
+    background-color: var(--bg-color);
+    display: flex;
+    width: 90%;
+    left: 3%;
+    z-index: 100;
+    height: 600px;
+    border-radius: 0px 0px 5px 5px;
+    padding: 25px;
+    display: none;
+}
+.modal__negozio .ricerca-button{
+    width: 200px; 
+}
+.modal__negozio .popolari-negozio__button{
+    background-color: var(--button-first-color);
+}
+.modal__popolari h3{
+    font-size: 15px;
+    color: var(--text-second-color);
+    font-weight: bold;
+    padding: 16px 0px;
+    border-bottom: 1px solid rgba(87, 87, 87, 0.5);
+    width: 98%;
+}
+.popolari-item{
+    display: flex;
+    margin: 2rem 0px;
+    justify-content: center;
+    align-items: center;
+}
+.popolari-item__card{
+    width: 30%;
+    height: 400px;
+    margin: auto;
+}
+.popolari-item__card:first-of-type{
+    margin-left: 0px;
+}
+.popolari-item__card img{
+    padding: 20px 40px;
+    width: 150px;
+    height: 200px;
+    background-color: var(--second-bg-color);
+}
+.popolari-item__card h2{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1.2rem 0px;
+}
+.second h2{
+    width: 110%;
+}
+.popolari-item__card p{
+    margin: 8px 0px;
+}
+.popolari-item__card h4{
+    font-size: 25px;
+    color: var(--button-first-color);
+}
+.popolari-negozio__button:hover{
+    background-color: var(--bg-color);
+    border: 3px solid var(--button-first-color);
+    color: var(--button-first-color);
+}
+
+/* Modal Scopri */
+.modal__scopri{
+    position: fixed;
+    top: 3.5rem;
+    background-color: var(--bg-color);
+    display: flex;
+    width: 93%;
+    left: 3%;
+    z-index: 100;
+    height: 650px;
+    border-radius: 0px 0px 5px 5px;
+    display: none;
+}
+.modal__notizie{
+    width: 80%;
+    padding: 30px 50px;
+}
+.notizie-container-title{
+    font-size: 15px;
+    color: var(--text-second-color);
+    font-weight: bold;
+    padding: 16px 0px;
+    border-bottom: 1px solid rgba(87, 87, 87, 0.5);
+}
+.notizie-container{
+    margin: 16px 0px;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 20% 20%;
+    grid-gap: 65px;
+ 
+}
+.notizia-card{
+    display: flex;
+}
+.notizia-card img{
+    width: 250px;
+    height: 140px;
+}
+.notizia-description{
+    margin: 0px 16px;
+}
+.notizia-description h3{
+    margin-top: 16px;
+    font-size: 21px;
+    width: 100%;
+}
+.notizia-description h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.visualizza-button{
+    border: none;
+    background-color: var(--button-first-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    width: 350px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 35%;
+    margin-top: -10px;
+}
+.visualizza-button:hover{
+    background-color: var(--bg-color);
+    border: 3px solid var(--button-first-color);
+    color: var(--button-first-color);
+}
+.modal-scopri__description{
+    background-color: var(--second-bg-color);
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 0px 0px 5px 0px;
+}
+.dentro-ubisoft,
+.non-solo-giochi{
+    display: flex;
+    flex-direction: column;
+}
+.dentro-ubisoft h3,
+.non-solo-giochi h3{
+    font-size: 15px;
+    color: var(--text-second-color);
+    font-weight: bold;
+    padding: 12px 0px;
+    border-bottom: 1px solid rgba(87, 87, 87, 0.5);
+}
+.dentro-ubisoft a,
+.non-solo-giochi a{
+    margin: 12px 0px;
+    color: var(--button-first-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+.dentro-ubisoft a:hover,
+.non-solo-giochi a:hover{
+    color: black;
+}
+
+
+
+
+/* Aiuto Nav Bar */
+.modal__aiuto{
+    position: fixed;
+    top: 3.5rem;
+    background-color: white;
+    display: flex;
+    width: 93%;
+    left: 3%;
+    z-index: 100;
+    height: 650px;
+    border-radius: 0px 0px 5px 5px;
+    display: none; 
+}
+.modal__aiuto h3{
+    font-size: 15px;
+    color: var(--text-second-color);
+    font-weight: bold;
+    padding: 12px 0px;
+}
+.Aiuto,
+.Discord{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.Aiuto{
+    margin: 25px 0px 25px 50px;
+}
+.Discord{
+    margin: 25px 50px 25px 0px;
+}
+.Aiuto img,
+.Discord img{
+    width: 350px;
+    padding: 16px 0px;
+}
+.Discord img{
+    margin: 5px 0px;
+}
+.Aiuto p,
+.Discord p,
+.ubisoft-connect p{
+    color: var(--text-second-color);
+    font-size: 18px;
+    padding: 12px 0px;
+}
+.Discord p{
+    width: 90%;
+    padding: 0px 25px;
+}
+.aiuto-button,
+.entra-button,
+.scarica-button{
+    border: none;
+    background-color: var(--button-first-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    width: 150px;
+    margin: auto;
+    border-radius: 25px;
+}
+.aiuto-button:hover,
+.entra-button:hover,
+.scarica-button:hover{
+    cursor: pointer;
+    background-color: var(--bg-color);
+    border: 3px solid var(--button-first-color);
+    color: var(--button-first-color);
+}
+.entra-button{
+    width: 250px;
+    margin-top: 3rem;
+}
+.scarica-button{
+    width: 400px;
+}
+.ubisoft-connect{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.ubisoft-connect img{
+    width: 90%;
+    margin: 8px 0px;
+}
+.ubisoft-connect h3{
+    margin: 16px 0px;
+}
+.ubisoft-connect p{
+    width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+/* Carousel Style */
+.main-carousel__list-container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.main-carousel__card-item {
+    opacity: 0;
+    position: relative;
+}
+.active{
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    background-color: cyan;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.active h1,
+.active h2,
+.active button{
+    animation-name: fade-in;
+    animation-duration: 1.5s;
+}
+.main-carousel__card-item h1 {
+    text-align: center;
+    width: 75%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 55px;
+    color: var(--bg-color);
+    z-index: 15;
+    text-shadow: 6px 6px 10px rgb(24, 24, 24);
+}
+.main-carousel__card-item h2{
+    text-align: center;
+    width: 80%;
+    color: var(--second-bg-color);
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    z-index: 15;
+    text-shadow: 6px 6px 10px rgb(24, 24, 24);
+}
+.main-carousel__card-buttons{
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 40%;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+}
+.main-carousel__card-buttons button{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    height: 3.5rem;
+    width: 250px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+}
+.main-carousel__card-item-backdrop {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+#card1{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2NL1KvBfSuS7xDcVBM7AKQ/d0b062b51eaded9319932f31451756c1/ac_shadows_std_keyart_no_logo.jpg');
+}
+#card2{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6pawBEx484MN2o3HtlllcU/94efbe3fc966183fab7edb8a618cb235/ubi-homescreen-swo-fwd23-bg-desktop-v2.jpg');
+}
+#card3{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1SGjrSjkKZUr2ail7xENIi/ba49faed4f00841530f9824310f21308/ubi-homescreen-xdefiant-s1-reveal-bg-desktop.jpg');
+}
+#card4{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3ldoOzbkmFYnZfus8F0qfK/52479f33144f071a197b28aeb0ebcf80/ubi-homescreen-battlecore-arena-bg-desktop.jpg');
+}
+#card5{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6B49sRNBG3UNrxVHuPMtqc/3b9cab25b0f3813b0d59654562a34dfe/ubi-homescreen-afop-keyart-v1.jpg');
+}
+#card6{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/ev4CKl7rPvYC3SZbzpwhd/5ad05696e74450efdcdd4f1555d80022/Ubislide_background_TCM_Chase_Sqaud.png');
+}
+#card7{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7pEWl4WA2zNqyhgW9GOByc/7edb474f62c46b1f119d18c6b01e5e2d/RR_S11_Keyart_edited.jpg');
+}
+#card8{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3mBV9onqA9Gjy17AOKyNGv/8b95dbfe8b88b873903a07ab19e8bc4d/skull-and-bones-y1s2-chorusofhavoc-keyart.jpg');
+}
+#card9{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6jRUCgBCw9O2d3U2hQmW1/b60757dd8a732265dad74304c47ab5b2/ubisoft-homescreen-carousel-slide-just-dance-vr-desktop-bg.jpg');
+}
+#card10{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5lnMhvvEk26VkFy1dleH1i/29df7df15000b634ecb17f6d53c9c8ca/ubi-homescreen-fh-y8s2-orachi-skin-bg-desktop.jpg');
+}
+#card11{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1vGT8uIuhbE3qf977uEQPS/51750d8f3ae3f93b2d545c93000cc1ec/r6s_ubi-com_y9s2_keyart.jpg');
+}
+#card12{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5nR3ZlT1XZISQMH5eae78A/3a48983194d622cd95efe3240a959f9c/Ubidotcom-Slider_AFOP-June24_2100x1181_NOLOGO.jpg');
+}
+#card13{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4M3pEDgiBx68ClhmVoqidx/bc862eda2f2ec4e21953fec5833c9ac0/anno-117-pax-romana-ubiscreen.jpg');
+}
+#card14{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6GA8lIUBrQBB3fmDN8soFd/a1656d24efd39304a4f9052ce3b02f9a/ubi-homescreen-carousel-just-dance-2025-desktop-bg.jpg');
+}
+#card15{
+    background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/10pVdaUh0PhLBxxwNkcU0h/d7fc0b227de99b6e704e2e18616e7c9e/ubisoft-homescreen-BGE-20thAnniversary-carousel-slide-desktop-bg-v2.jpg');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list-card-name__container{
+    position: absolute;
+    z-index:100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerScroll{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(15, 20%);
+    grid-gap: 10px;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    scroll-behavior: smooth;
+}
+
+.title-card{
+    margin-top: 40%;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-card img{
+    display: none;
+}
+.title-card h3{
+    max-width: 80%;
+    height: 20%;
+    text-align: center;
+    color: rgba(173, 173, 173, 0.8);
+}
+.center{
+    margin-top: 0;
+    height: 100%;
+    animation-name: fade-in;
+    animation-duration: 2s;
+}
+.center h3{
+    display: none;
+}
+.center img{
+    display: flex;
+}
+.extremeleft{
+    grid-row-start: 1;
+    grid-column-end: 2;
+}
+
+
+
+
+.left-btn,
+.right-btn{
+    width: 5%;
+    margin-top: 8rem;
+    height: 70px;
+    z-index: 100;
+    border: none;
+    background-color: rgba(124, 124, 124, 0.6);
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+.left-btn{
+    border-radius: 0px 35px 35px 0px;
+}
+.right-btn{
+    border-radius: 35px 0px 0px 35px;
+}
+.right-btn:hover,
+.left-btn:hover{
+    cursor: pointer;
+    background-color: rgba(229, 229, 229, 0.5);
+}
+
+
+
+
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1; 
+    }
+}
+
+
+
+
+
+
+
+
