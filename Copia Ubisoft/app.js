@@ -48,242 +48,311 @@ NavBarP.forEach(btn => {
 /* Carousel Scroll Effect */
 const LeftBtn = document.querySelector('.left-btn');
 const RightBtn = document.querySelector('.right-btn');
-const containerScroll = document.querySelector('.containerScroll');
 
+
+const itemPagination = document.querySelectorAll('.title-card h3');
+const itemsPerViewportPagination = 5;
+
+const itemsPerViewport = 5; 
 const itemWidth = 20;
-let currentIndex = 0;
+let currentIndex = 1;
 
-LeftBtn.addEventListener('click', () => {
 
-    if (currentIndex > 0) {
-        currentIndex--;
-        const scrollAmount = currentIndex * itemWidth;
-        containerScroll.scrollTo({
-            left: scrollAmount * containerScroll.scrollWidth / 300,
-            behavior: 'smooth'
-        });
+
+
+// Carousel Click Item 
+
+// Pagination Click
+function updateCarousel(idItem) {
+
+    if (idItem == 13 || idItem == 12) {
+        const item14 = document.getElementById(14);
+        const item15 = document.getElementById(15);
+        const item1 = document.getElementById(1);
+        const item2 = document.getElementById(2);
+
+        item14.style.gridColumn = 16;
+        item15.style.gridColumn = 17;
+        item1.style.gridColumn = 18;
+        item2.style.gridColumn = 19;
     }
-});
+    if (idItem == 1 || idItem == 2) {
+        const item14 = document.getElementById(14);
+        const item15 = document.getElementById(15);
+        const item1 = document.getElementById(1);
+        const item2 = document.getElementById(2);
 
-
-
-// Event listener for right button
-RightBtn.addEventListener('click', () => {
-    if (currentIndex < 15) {
-        currentIndex++;
-
-        const scrollAmount = currentIndex * itemWidth;
-        containerScroll.scrollTo({
-            left: scrollAmount * containerScroll.scrollWidth / 300, 
-            behavior: 'smooth'
-        });
-
-        // Modify The Center Item Style
-        const centerItem = document.querySelector('.center');
-        const nextId = parseInt(centerItem.id) + 1;
-        const nextCenterItem = document.getElementById(nextId);
-
-        centerItem.classList.remove('center');
-        nextCenterItem.classList.add('center');
-
-        const ActiveItem = document.querySelector('.main-carousel__card-item.active');
-        const currentIdItem = ActiveItem.getAttribute('idCard');
-        const nextIdItem = parseInt(currentIdItem) + 1;
-
-        if (nextIdItem == 16) {
-            ActiveItem.classList.remove('active');
-            const NexItem = document.querySelector('[idCard="1"]');
-            NexItem.classList.add('active');
-        } else {
-            ActiveItem.classList.remove('active');
-            const NexItem = document.querySelector(`[idCard="${nextIdItem}"]`);
-            NexItem.classList.add('active');
-        }
-
-
-        /* const listItem = document.querySelector('.containerScroll');
-        const extremeLeft = document.querySelector('.extremeleft');
-        extremeLeft.classList.remove('extremeleft'); 
-        listItem.removeChild(extremeLeft);
-        listItem.appendChild(extremeLeft);
-
-        if (currentIndex == 1){
-            const newExtremLeft = document.getElementById(15)
-            newExtremLeft.classList.add('extremeLeft');
-        }else{
-            const newExtremLeft = document.getElementById(parseInt(currentIndex) - 2);
-            newExtremLeft.classList.add('extremeLeft');
-        } */
+        item14.style.gridColumn = 1;
+        item15.style.gridColumn = 2;
+        item1.style.gridColumn = 3;
+        item2.style.gridColumn = 4;
     }
-});
+    if (idItem == 15 || idItem == 14) {
+        const item14 = document.getElementById(14);
+        const item15 = document.getElementById(15);
+        const item1 = document.getElementById(1);
+        const item2 = document.getElementById(2);
 
+        item14.style.gridColumn = 16;
+        item15.style.gridColumn = 17;
+        item1.style.gridColumn = 18;
+        item2.style.gridColumn = 19;
+    }
 
+    // Change the center
+    const centerItem = document.querySelector('.title-card.center');
+    centerItem.classList.remove('center');
 
+    const nexCenterItem = document.getElementById(parseInt(idItem));
+    nexCenterItem.classList.add('center'); 
 
+    // Change the active 
+    const activeItem = document.querySelector('.main-carousel__card-item.active');
+    activeItem.classList.remove('active');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* setTimeout(() => {
-    rightSlide();
-
-    setInterval(() => {
-        rightSlide();
-    }, 5000);
-}, 5000);
- */
-
-
-
-
-
-/*
-function rightSlide(){
-
- const assassinCreed = document.querySelector('[img-refere="1"]');
- const title = assassinCreed.querySelector('h3');
- const img = assassinCreed.querySelector('img');
- 
- title.style.display = 'flex';
- img.style.display = 'none'
-
- // Show the correct item to background
- const ActiveItem = document.querySelector('.main-carousel__card-item.active');
- const currentIdItem = ActiveItem.getAttribute('idCard');
- const nextIdItem = parseInt(currentIdItem) + 1;
-
- if (nextIdItem == 16) {
-     ActiveItem.classList.remove('active');
-     const NexItem = document.querySelector('[idCard="1"]');
-     NexItem.classList.add('active');
-     title.style.display = 'none';
-     img.style.display = 'flex';
-
- } else {
-     ActiveItem.classList.remove('active');
-     const NexItem = document.querySelector(`[idCard="${nextIdItem}"]`);
-     NexItem.classList.add('active');
- }
-
- // Show the corresponding item title
- let nextExtremeRightId = parseInt(nextIdItem) + 2;
-
- const CurrentCenterItem = document.querySelector('.center');
- const CurrentLeftItem = document.querySelector('.left');
- const CurrentRightItem = document.querySelector('.right');
-
- const CurrentExtremeRightItem = document.querySelector('.right1');
- const CurrentExtremeLeftItem = document.querySelector('.left1');
-
- if (nextExtremeRightId > 15) {
-     nextExtremeRightId = (parseInt(nextIdItem) - 15) + 2;
- }
- const NextExtremeRightItem = document.querySelector(`div[img-refere="${nextExtremeRightId}"]`);
-
-
- CurrentExtremeLeftItem.classList.remove('left1');
- CurrentLeftItem.classList.remove('left');
- CurrentLeftItem.classList.add('left1');
- 
- CurrentCenterItem.classList.remove('center');
- CurrentCenterItem.classList.add('left');
-
- CurrentRightItem.classList.remove('right');
- CurrentRightItem.classList.add('center');
-
- CurrentExtremeRightItem.classList.remove('right1');
- CurrentExtremeRightItem.classList.add('right');
- NextExtremeRightItem.classList.add('right1');
+    const nextActiveItem = document.querySelector(`[idCard='${idItem}']`);
+    nextActiveItem.classList.add('active');
 }
-*/
+function scrollToCenter(idItem) {
+    const containerScroll = document.querySelector('.containerScroll');
+    const itemWidth = containerScroll.clientWidth / itemsPerViewportPagination; // Width of each item
+    const scrollAmount = (parseInt(idItem) - 1) * itemWidth;
+
+    containerScroll.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+}
+updateCarousel(1);
+for (const item of itemPagination) {
+    item.addEventListener('click', function() {
+        var idItem = this.getAttribute('id-refere');
+        
+        updateCarousel(idItem);
+        scrollToCenter(idItem);
+
+    }.bind(item)); 
+}
 
 
-/* LeftBtn.addEventListener('click', ()=>{
-    const assassinCreed = document.querySelector('[img-refere="1"]');
-    const title = assassinCreed.querySelector('h3');
-    const img = assassinCreed.querySelector('img');
+// Carousel Right Btn CLick
+let interval = 5000;
+let intervalId;
+
+function updateCarouselRight(idItem) {
+    let nextId = parseInt(idItem) + 1;
+
+    // Change the center
+    const centerItem = document.querySelector('.center');
+    centerItem.classList.remove('center');
+
+    if (nextId == 12) {
+        const item14 = document.getElementById(14);
+        const item15 = document.getElementById(15);
+        const item1 = document.getElementById(1);
+        const item2 = document.getElementById(2);
+
+        item14.style.gridColumn = 16;
+        item15.style.gridColumn = 17;
+        item1.style.gridColumn = 18;
+        item2.style.gridColumn = 19;
+    }
+
+    if (nextId > 15) {
+        nextId = 1;
+        const item14 = document.getElementById(14);
+        const item15 = document.getElementById(15);
+        const item1 = document.getElementById(1);
+        const item2 = document.getElementById(2);
+
+        item14.style.gridColumn = 1;
+        item15.style.gridColumn = 2;
+        item1.style.gridColumn = 3;
+        item2.style.gridColumn = 4;
+    }
+
+    const nextCenterItem = document.getElementById(nextId);
+    nextCenterItem.classList.add('center');
+
+    // Change the active
+    const activeItem = document.querySelector('.main-carousel__card-item.active');
+    activeItem.classList.remove('active');
+
+    const nextActiveItem = document.querySelector(`[idCard='${nextId}']`);
+    nextActiveItem.classList.add('active');
+
+    return nextId;
+}
+function scrollToCenterRightAnimation(idItem) {
+    const containerScroll = document.querySelector('.containerScroll');
+    const itemWidth = containerScroll.clientWidth / 5;
+    const scrollAmount = (parseInt(idItem) - 0.8) * itemWidth;
+
+    containerScroll.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+}
+function rightClickScrollHandling() {
+    const centerItem = document.querySelector('.title-card.center');
+    const idItem = centerItem.id;
+
+    const nextId = updateCarouselRight(idItem);
+    scrollToCenterRightAnimation(nextId);
+    console.log(interval);
+}
+function startInterval() {
+    if (intervalId) {
+        clearInterval(intervalId);
+    }
+    intervalId = setInterval(rightClickScrollHandling, interval);
+}
+RightBtn.addEventListener('click', () => {
+    interval = 10000;
+    rightClickScrollHandling();
+    startInterval(); 
+});
+
+// Left Click Scroll Effect 
+function updateCarouselLeft(idItem) {
+    let prevId = parseInt(idItem) - 1;
+
+    // Change the center
+    const centerItem = document.querySelector('.center');
+    centerItem.classList.remove('center');
+
+    if (prevId == 5) {
+        const item14 = document.getElementById(14);
+        const item15 = document.getElementById(15);
+        const item1 = document.getElementById(1);
+        const item2 = document.getElementById(2);
+
+        item14.style.gridColumn = 1;
+        item15.style.gridColumn = 2;
+        item1.style.gridColumn = 3;
+        item2.style.gridColumn = 4;
+    }
+
+    if (prevId < 1) {
+        prevId = 15;
+        const item14 = document.getElementById(14);
+        const item15 = document.getElementById(15);
+        const item1 = document.getElementById(1);
+        const item2 = document.getElementById(2);
+
+        item14.style.gridColumn = 16;
+        item15.style.gridColumn = 17;
+        item1.style.gridColumn = 18;
+        item2.style.gridColumn = 19;
+    }
+
+    const prevCenterItem = document.getElementById(prevId);
+    prevCenterItem.classList.add('center');
+
+    // Change the active
+    const activeItem = document.querySelector('.main-carousel__card-item.active');
+    activeItem.classList.remove('active');
+
+    const prevActiveItem = document.querySelector(`[idCard='${prevId}']`);
+    prevActiveItem.classList.add('active');
+
+    return prevId;
+}
+function scrollToCenterLeftAnimation(idItem) {
+    const containerScroll = document.querySelector('.containerScroll');
+    const itemWidth = containerScroll.clientWidth / 5;
+    const scrollAmount = (parseInt(idItem) - 0.8) * itemWidth;
+
+    containerScroll.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+}
+function leftClickScrollHangling(){
+    const centerItem = document.querySelector('.title-card.center');
+    const idItem = centerItem.id;
+
+    const prevId = updateCarouselLeft(idItem);
+
+    scrollToCenterLeftAnimation(prevId);
+};
+LeftBtn.addEventListener('click', () => {
+    interval = 10000;
+    leftClickScrollHangling();
+    startInterval(); 
+});
+
+startInterval();
+
+
+
+// Drag Click Scroll
+let isDragging = false;
+let startX;
+let scrollLeft;
+const containerScroll = document.querySelector('.containerScroll');
+const items = document.querySelectorAll('.title-card');
+
+containerScroll.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - containerScroll.offsetLeft;
+    scrollLeft = containerScroll.scrollLeft;
+    clearInterval(intervalId); 
+});
+containerScroll.addEventListener('mouseleave', () => {
+    if (isDragging) {
+        isDragging = false;
+        handleCentering();
+    }
+});
+containerScroll.addEventListener('mouseup', () => {
+    if (isDragging) {
+        isDragging = false;
+        handleCentering();
+        startInterval(); 
+    }
+});
+containerScroll.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerScroll.offsetLeft;
+    const walk = (x - startX) * 3; 
+    containerScroll.scrollLeft = scrollLeft - walk;
+});
+function handleCentering() {
+    const containerRect = containerScroll.getBoundingClientRect();
+    const containerCenterX = containerRect.left + containerRect.width / 2;
     
-    title.style.display = 'flex';
-    img.style.display = 'none'
-
-    // Show the correct item to background
-    const ActiveItem = document.querySelector('.main-carousel__card-item.active');
-    const currentIdItem = ActiveItem.getAttribute('idCard');
-    const nextIdItem = parseInt(currentIdItem) -1;
-
-    if(nextIdItem == 0){
-        ActiveItem.classList.remove('active');
-        const NexItem = document.querySelector('[idCard="15"]');
-        NexItem.classList.add('active');
-    } 
-    else{
-        ActiveItem.classList.remove('active');
-        const NexItem = document.querySelector(`[idCard="${nextIdItem}"]` );
-        NexItem.classList.add('active');
-
-        if(nextIdItem == 1){
-            title.style.display = 'none';
-            img.style.display = 'flex';
+    let closestItem = null;
+    let closestDistance = Infinity;
+    
+    items.forEach(item => {
+        const itemRect = item.getBoundingClientRect();
+        const itemCenterX = itemRect.left + itemRect.width / 2;
+        const distance = Math.abs(containerCenterX - itemCenterX);
+        
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            closestItem = item;
         }
+    });
+
+    items.forEach(item => item.classList.remove('center'));
+
+    if (closestItem) {
+        const active = document.querySelector('.active');
+        active.classList.remove('active');
+        const next = closestItem.id;
+        const nextActive = document.querySelector(`[idCard='${next}']`);
+        nextActive.classList.add('active')
+
+
+        closestItem.classList.add('center');
     }
- 
-    // Show the corresponding item title
-    const CurrentCenterItem = document.querySelector('.center');
-    const CurrentLeftItem = document.querySelector('.left');
-    const CurrentRightItem = document.querySelector('.right');
+}
+startInterval();
 
-    let nextExtremeLeftId = parseInt(CurrentLeftItem.getAttribute('img-refere')) - 2;
- 
-    const CurrentExtremeRightItem = document.querySelector('.right1');
-    const CurrentExtremeLeftItem = document.querySelector('.left1');
- 
-    if (nextExtremeLeftId <= 0) {
-        nextExtremeLeftId = (parseInt(nextIdItem) + 15) - 2;
-    }
-    const NextExtremeLeftItem = document.querySelector(`div[img-refere="${nextExtremeLeftId}"]`);
 
-    console.log(nextExtremeLeftId)
-    console.log(NextExtremeLeftItem)
- 
-    CurrentExtremeRightItem.classList.remove('right1');
-    CurrentRightItem.classList.remove('right');
-    CurrentRightItem.classList.add('right1');
-     
-    CurrentCenterItem.classList.remove('center');
-    CurrentCenterItem.classList.add('right');
- 
-    CurrentLeftItem.classList.remove('left');
-    CurrentLeftItem.classList.add('center');
- 
-    CurrentExtremeLeftItem.classList.remove('left1');
-    CurrentExtremeLeftItem.classList.add('left');
-    NextExtremeLeftItem.classList.add('left1'); 
-  
-})
-
- */
 
 
 

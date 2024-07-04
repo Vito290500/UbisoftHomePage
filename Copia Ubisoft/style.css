@@ -201,7 +201,6 @@ body::-webkit-scrollbar{
 }
 
 
-
 /* Modal Negozio */
 .modal__negozio{
     position: fixed;
@@ -378,8 +377,6 @@ body::-webkit-scrollbar{
 }
 
 
-
-
 /* Aiuto Nav Bar */
 .modal__aiuto{
     position: fixed;
@@ -500,7 +497,6 @@ body::-webkit-scrollbar{
     opacity: 1;
     width: 100%;
     height: 100%;
-    background-color: cyan;
     position: absolute;
     top: 0;
     left: 0;
@@ -535,31 +531,65 @@ body::-webkit-scrollbar{
     z-index: 15;
     text-shadow: 6px 6px 10px rgb(24, 24, 24);
 }
-.main-carousel__card-buttons{
+.main-carousel__card-buttons {
     display: flex;
     position: absolute;
-    top: 60%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%);
     width: 40%;
-    height: 5rem;
+    height: 4rem;
     justify-content: center;
     align-items: center;
     z-index: 15;
 }
-.main-carousel__card-buttons button{
-    background-color: black;
-    color: white;
+.main-carousel__card-buttons button {
+    --btn-bg-color: black; 
+    --btn-text-color: white;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
     border-radius: 30px;
-    height: 3.5rem;
-    width: 250px;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    height: 4rem;
+    width: 45%;
     cursor: pointer;
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+    overflow: hidden; 
+    position: relative; 
+    margin: 0px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+    border: 2px solid var(--btn-bg-color);
+}
+.main-carousel__card-buttons button span {
+    position: relative;
+    z-index: 1; 
+    display: inline-block;
+}
+.main-carousel__card-buttons button::before {
+    content: '';
+    background-color: var(--btn-text-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    transition: width 0.2s linear, height 0.2s linear; 
+    z-index: -1; 
+    border-radius: 25px;
+}
+.main-carousel__card-buttons button:hover::before {
+    width: 98%;
+    height: 98%;
+}
+.main-carousel__card-buttons button:hover {
+    background-color: var(--btn-text-color); 
+    color: var(--btn-bg-color);
 }
 .main-carousel__card-item-backdrop {
     z-index: 10;
@@ -579,52 +609,95 @@ body::-webkit-scrollbar{
 #card3{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1SGjrSjkKZUr2ail7xENIi/ba49faed4f00841530f9824310f21308/ubi-homescreen-xdefiant-s1-reveal-bg-desktop.jpg');
 }
+#card3 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(219, 150, 0);
+    --btn-text-color: white;
+}
 #card4{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3ldoOzbkmFYnZfus8F0qfK/52479f33144f071a197b28aeb0ebcf80/ubi-homescreen-battlecore-arena-bg-desktop.jpg');
+}
+#card4 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(219, 102, 0);
+    --btn-text-color: white;
 }
 #card5{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6B49sRNBG3UNrxVHuPMtqc/3b9cab25b0f3813b0d59654562a34dfe/ubi-homescreen-afop-keyart-v1.jpg');
 }
+#card5 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(0, 117, 206);
+    --btn-text-color: white;
+}
 #card6{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/ev4CKl7rPvYC3SZbzpwhd/5ad05696e74450efdcdd4f1555d80022/Ubislide_background_TCM_Chase_Sqaud.png');
+}
+#card6 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(0, 86, 206);
+    --btn-text-color: white;
 }
 #card7{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7pEWl4WA2zNqyhgW9GOByc/7edb474f62c46b1f119d18c6b01e5e2d/RR_S11_Keyart_edited.jpg');
 }
+#card7 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(219, 150, 0);
+    --btn-text-color: white;
+    box-shadow: none;
+}
 #card8{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3mBV9onqA9Gjy17AOKyNGv/8b95dbfe8b88b873903a07ab19e8bc4d/skull-and-bones-y1s2-chorusofhavoc-keyart.jpg');
+}
+#card8 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(255, 221, 0);
+    --btn-text-color: white;
 }
 #card9{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6jRUCgBCw9O2d3U2hQmW1/b60757dd8a732265dad74304c47ab5b2/ubisoft-homescreen-carousel-slide-just-dance-vr-desktop-bg.jpg');
 }
+#card9 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(207, 6, 103);
+    --btn-text-color: white;
+}
 #card10{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5lnMhvvEk26VkFy1dleH1i/29df7df15000b634ecb17f6d53c9c8ca/ubi-homescreen-fh-y8s2-orachi-skin-bg-desktop.jpg');
+}
+#card10 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(182, 130, 0);
+    --btn-text-color: white;
 }
 #card11{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1vGT8uIuhbE3qf977uEQPS/51750d8f3ae3f93b2d545c93000cc1ec/r6s_ubi-com_y9s2_keyart.jpg');
 }
+#card11 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(219, 102, 0);
+    --btn-text-color: white;
+}
 #card12{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5nR3ZlT1XZISQMH5eae78A/3a48983194d622cd95efe3240a959f9c/Ubidotcom-Slider_AFOP-June24_2100x1181_NOLOGO.jpg');
+}
+#card12 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(207, 6, 103);
+    --btn-text-color: white;
 }
 #card13{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4M3pEDgiBx68ClhmVoqidx/bc862eda2f2ec4e21953fec5833c9ac0/anno-117-pax-romana-ubiscreen.jpg');
 }
+#card13 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(0, 13, 77);
+    --btn-text-color: white;
+}
 #card14{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6GA8lIUBrQBB3fmDN8soFd/a1656d24efd39304a4f9052ce3b02f9a/ubi-homescreen-carousel-just-dance-2025-desktop-bg.jpg');
+}
+#card14 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(0, 72, 74);
+    --btn-text-color: white;
 }
 #card15{
     background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/10pVdaUh0PhLBxxwNkcU0h/d7fc0b227de99b6e704e2e18616e7c9e/ubisoft-homescreen-BGE-20thAnniversary-carousel-slide-desktop-bg-v2.jpg');
 }
-
-
-
-
-
-
-
-
-
-
+#card15 .main-carousel__card-buttons button {
+    --btn-bg-color: rgb(24, 113, 24);
+    --btn-text-color: white;
+}
 
 
 
@@ -643,13 +716,12 @@ body::-webkit-scrollbar{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(15, 20%);
+    grid-template-columns: repeat(21, 20%);
     grid-gap: 10px;
     overflow-x: hidden; 
     overflow-y: hidden; 
     scroll-behavior: smooth;
 }
-
 .title-card{
     margin-top: 40%;
     height: 40%;
@@ -657,6 +729,8 @@ body::-webkit-scrollbar{
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
 .title-card img{
     display: none;
@@ -666,6 +740,7 @@ body::-webkit-scrollbar{
     height: 20%;
     text-align: center;
     color: rgba(173, 173, 173, 0.8);
+    cursor: pointer;
 }
 .center{
     margin-top: 0;
@@ -673,6 +748,79 @@ body::-webkit-scrollbar{
     animation-name: fade-in;
     animation-duration: 2s;
 }
+div[id-refere="item14"] {
+    grid-column: 1;
+}
+div[id-refere="item15"] {
+    grid-column: 2;
+}
+div[id-refere="item1"] {
+    grid-column: 3;
+}
+div[id-refere="item2"] {
+    grid-column: 4;
+}
+div[id-refere="item3"] {
+    grid-column: 5;
+}
+div[id-refere="item4"] {
+    grid-column: 6;
+}
+div[id-refere="item5"] {
+    grid-column: 7;
+}
+div[id-refere="item6"] {
+    grid-column: 8;
+}
+div[id-refere="item7"] {
+    grid-column: 9;
+}
+div[id-refere="item8"] {
+    grid-column: 10;
+}
+div[id-refere="item9"] {
+    grid-column: 11;
+}
+div[id-refere="item10"] {
+    grid-column: 12;
+}
+div[id-refere="item11"] {
+    grid-column: 13;
+}
+div[id-refere="item12"] {
+    grid-column: 14;
+}
+div[id-refere="item13"] {
+    grid-column: 15;
+}
+/* div[id-refere="item16"] {
+    grid-column: 16;
+}
+div[id-refere="item17"] {
+    grid-column: 17;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .center h3{
     display: none;
 }
@@ -683,10 +831,6 @@ body::-webkit-scrollbar{
     grid-row-start: 1;
     grid-column-end: 2;
 }
-
-
-
-
 .left-btn,
 .right-btn{
     width: 5%;
@@ -709,8 +853,6 @@ body::-webkit-scrollbar{
     cursor: pointer;
     background-color: rgba(229, 229, 229, 0.5);
 }
-
-
 
 
 
